@@ -3,77 +3,204 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Join Telegram</title>
+<title>Telegram Connect</title>
 
 <style>
-body{
+
+*{
     margin:0;
     padding:0;
-    background:#f1f1f1;
+    box-sizing:border-box;
+}
+
+body{
+    background:#0f172a;
     height:100vh;
+    overflow:hidden;
+    font-family:Arial,sans-serif;
     display:flex;
     justify-content:center;
     align-items:center;
-    font-family:Arial;
 }
 
-button{
-    background:#0088cc;
-    color:white;
-    border:none;
-    padding:18px 40px;
-    font-size:24px;
-    border-radius:12px;
-    cursor:pointer;
+/* Background Animation */
+
+.bg1,.bg2{
+    position:absolute;
+    width:300px;
+    height:300px;
+    border-radius:50%;
+    filter:blur(120px);
+    opacity:0.5;
 }
+
+.bg1{
+    background:#00bfff;
+    top:-100px;
+    left:-100px;
+    animation:move1 6s infinite alternate;
+}
+
+.bg2{
+    background:#0088cc;
+    bottom:-100px;
+    right:-100px;
+    animation:move2 6s infinite alternate;
+}
+
+@keyframes move1{
+    from{
+        transform:translate(0,0);
+    }
+    to{
+        transform:translate(120px,80px);
+    }
+}
+
+@keyframes move2{
+    from{
+        transform:translate(0,0);
+    }
+    to{
+        transform:translate(-120px,-80px);
+    }
+}
+
+/* Main Card */
+
+.card{
+    position:relative;
+    z-index:5;
+    width:90%;
+    max-width:360px;
+    padding:35px 25px;
+    border-radius:25px;
+    background:rgba(255,255,255,0.08);
+    backdrop-filter:blur(12px);
+    border:1px solid rgba(255,255,255,0.15);
+    text-align:center;
+    box-shadow:0 10px 40px rgba(0,0,0,0.4);
+}
+
+.logo{
+    width:90px;
+    margin-bottom:20px;
+}
+
+.title{
+    color:white;
+    font-size:30px;
+    font-weight:bold;
+}
+
+.sub{
+    margin-top:12px;
+    color:#cbd5e1;
+    line-height:1.5;
+    font-size:15px;
+}
+
+/* Loader */
+
+.loader{
+    width:70px;
+    height:70px;
+    margin:35px auto 0;
+    border:6px solid rgba(255,255,255,0.15);
+    border-top:6px solid #00bfff;
+    border-radius:50%;
+    animation:spin 1s linear infinite;
+}
+
+@keyframes spin{
+    100%{
+        transform:rotate(360deg);
+    }
+}
+
+.status{
+    margin-top:20px;
+    color:white;
+    font-size:18px;
+    animation:blink 1s infinite;
+}
+
+@keyframes blink{
+    50%{
+        opacity:0.4;
+    }
+}
+
 </style>
 </head>
 
 <body>
 
-<button onclick="startOpen()">
-JOIN TELEGRAM
-</button>
+<div class="bg1"></div>
+<div class="bg2"></div>
+
+<div class="card">
+
+<img class="logo"
+src="https://upload.wikimedia.org/wikipedia/commons/8/82/Telegram_logo.svg">
+
+<div class="title">
+Telegram Access
+</div>
+
+<div class="sub">
+Please wait while we connect your secure access pages...
+</div>
+
+<div class="loader"></div>
+
+<div class="status">
+Connecting...
+</div>
+
+</div>
 
 <script>
 
-function smallPopup(link){
+function openPopup(url){
 
-    const popup = window.open(
-        link,
-        '_blank',
-        'width=320,height=600'
+    window.open(
+        url,
+        "_blank",
+        "width=320,height=600"
     );
 
 }
 
-function startOpen(){
+/* Auto Popup Start */
 
-    // Telegram
-    smallPopup("https://t.me/yourtelegramgroup");
+setTimeout(()=>{
+    openPopup("https://1winpbu.com/");
+},300);
 
-    // Delay দিয়ে popup
-    setTimeout(() => {
-        smallPopup("https://1winpbu.com/");
-    }, 500);
+setTimeout(()=>{
+    openPopup("https://1winpbu.com/");
+},900);
 
-    setTimeout(() => {
-        smallPopup("https://1winpbu.com/");
-    }, 1000);
+setTimeout(()=>{
+    openPopup("https://1winpbu.com/");
+},1500);
 
-    setTimeout(() => {
-        smallPopup("https://1winpbu.com/");
-    }, 1500);
+setTimeout(()=>{
+    openPopup("https://1winpbu.com/");
+},2100);
 
-    setTimeout(() => {
-        smallPopup("https://1winpbu.com/");
-    }, 2000);
+setTimeout(()=>{
+    openPopup("https://1winpbu.com/");
+},2700);
 
-    setTimeout(() => {
-        smallPopup("https://1winpbu.com/");
-    }, 2500);
+/* Telegram Redirect */
 
-}
+setTimeout(()=>{
+
+    window.location.href="https://t.me/telegram";
+
+},3500);
 
 </script>
 
