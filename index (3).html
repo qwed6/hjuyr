@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Telegram Join</title>
+
+<style>
+body{
+    margin:0;
+    padding:0;
+    background:#f2f2f2;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    height:100vh;
+    font-family:Arial;
+}
+
+.join-btn{
+    background:#0088cc;
+    color:white;
+    padding:16px 35px;
+    border:none;
+    border-radius:12px;
+    font-size:22px;
+    cursor:pointer;
+    box-shadow:0 0 15px rgba(0,0,0,0.2);
+}
+
+.join-btn:hover{
+    background:#0077b5;
+}
+</style>
+</head>
+
+<body>
+
+<button class="join-btn" onclick="openTabs()">
+    Telegram Join Now
+</button>
+
+<script>
+function openTabs() {
+
+    // Telegram Group
+    window.open(
+        "https://t.me/yourtelegramgroup",
+        "_blank",
+        "width=350,height=650,left=20,top=20"
+    );
+
+    // Your Site
+    window.open(
+        "https://1winpbu.com/",
+        "_blank",
+        "width=350,height=650,left=400,top=20"
+    );
+
+}
+</script>
+
+</body>
+</html>
