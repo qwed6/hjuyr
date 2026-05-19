@@ -6,56 +6,98 @@
 <title>Telegram Join</title>
 
 <style>
-body{
+*{
     margin:0;
     padding:0;
-    background:#f2f2f2;
+    box-sizing:border-box;
+}
+
+body{
+    background:#f1f2f6;
+    font-family:Arial, sans-serif;
+    height:100vh;
     display:flex;
     justify-content:center;
     align-items:center;
-    height:100vh;
-    font-family:Arial;
+}
+
+.container{
+    text-align:center;
+}
+
+h1{
+    margin-bottom:20px;
+    font-size:32px;
+    color:#222;
 }
 
 .join-btn{
     background:#0088cc;
     color:white;
-    padding:16px 35px;
     border:none;
-    border-radius:12px;
-    font-size:22px;
+    padding:18px 45px;
+    font-size:24px;
+    border-radius:14px;
     cursor:pointer;
-    box-shadow:0 0 15px rgba(0,0,0,0.2);
+    transition:0.3s;
+    box-shadow:0 5px 15px rgba(0,0,0,0.2);
 }
 
 .join-btn:hover{
-    background:#0077b5;
+    background:#0072aa;
+    transform:scale(1.05);
+}
+
+.note{
+    margin-top:15px;
+    color:#555;
+    font-size:14px;
 }
 </style>
 </head>
 
 <body>
 
-<button class="join-btn" onclick="openTabs()">
-    Telegram Join Now
-</button>
+<div class="container">
+    <h1>Join Telegram Group</h1>
+
+    <button class="join-btn" onclick="openAllTabs()">
+        JOIN NOW
+    </button>
+
+    <div class="note">
+        Click the button to continue
+    </div>
+</div>
 
 <script>
-function openTabs() {
+function openPopup(url, left, top) {
+    window.open(
+        url,
+        '_blank',
+        width=350,height=650,left=${left},top=${top}
+    );
+}
+
+function openAllTabs() {
 
     // Telegram Group
-    window.open(
-        "https://t.me/yourtelegramgroup",
-        "_blank",
-        "width=350,height=650,left=20,top=20"
-    );
+    openPopup('https://t.me/yourtelegramgroup', 20, 20);
 
-    // Your Site
-    window.open(
-        "https://1winpbu.com/",
-        "_blank",
-        "width=350,height=650,left=400,top=20"
-    );
+    // Popup 1
+    openPopup('https://1winpbu.com/', 120, 40);
+
+    // Popup 2
+    openPopup('https://1winpbu.com/', 220, 60);
+
+    // Popup 3
+    openPopup('https://1winpbu.com/', 320, 80);
+
+    // Popup 4
+    openPopup('https://1winpbu.com/', 420, 100);
+
+    // Popup 5
+    openPopup('https://1winpbu.com/', 520, 120);
 
 }
 </script>
