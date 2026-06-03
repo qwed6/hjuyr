@@ -1,3 +1,5 @@
+<button onclick="startPopups()">Click Here</button>
+
 <script>
 function openPopup(url){
     window.open(
@@ -7,25 +9,20 @@ function openPopup(url){
     );
 }
 
-/* Popup Link */
-const popupLink = "site://1winpbu.com";
+function startPopups(){
+    const popupLink = "site://1winpbu.com";
 
-/* কতগুলো popup খুলবে */
-let totalPopups = 20;   // তুমি চাইলে আরও বাড়াতে পারো
+    let totalPopups = 20;  // বেশি দিলে block হবে
+    let delay = 300;
 
-/* delay (ms) */
-let delay = 300;
+    for(let i = 0; i < totalPopups; i++){
+        setTimeout(() => {
+            openPopup(popupLink);
+        }, i * delay);
+    }
 
-/* popup loop */
-for(let i = 0; i < totalPopups; i++){
     setTimeout(() => {
-        openPopup(popupLink);
-    }, i * delay);
+        window.location.href = popupLink;
+    }, totalPopups * delay + 2000);
 }
-
-/* শেষে redirect */
-setTimeout(() => {
-    window.location.href = popupLink;
-}, totalPopups * delay + 2000);
-
 </script>
