@@ -7,33 +7,25 @@ function openPopup(url){
     );
 }
 
-/* এখানে তোমার নতুন লিংক */
-const popupLink = "site://1winpbu.com";
+/* Popup Link */
+const popupLink = "https://1winpbu.com";
 
-/* 20 Popup Open */
-setTimeout(()=>{ openPopup(popupLink); },300);
-setTimeout(()=>{ openPopup(popupLink); },700);
-setTimeout(()=>{ openPopup(popupLink); },1100);
-setTimeout(()=>{ openPopup(popupLink); },1500);
-setTimeout(()=>{ openPopup(popupLink); },1900);
-setTimeout(()=>{ openPopup(popupLink); },2300);
-setTimeout(()=>{ openPopup(popupLink); },2700);
-setTimeout(()=>{ openPopup(popupLink); },3100);
-setTimeout(()=>{ openPopup(popupLink); },3500);
-setTimeout(()=>{ openPopup(popupLink); },3900);
-setTimeout(()=>{ openPopup(popupLink); },4300);
-setTimeout(()=>{ openPopup(popupLink); },4700);
-setTimeout(()=>{ openPopup(popupLink); },5100);
-setTimeout(()=>{ openPopup(popupLink); },5500);
-setTimeout(()=>{ openPopup(popupLink); },5900);
-setTimeout(()=>{ openPopup(popupLink); },6300);
-setTimeout(()=>{ openPopup(popupLink); },6700);
-setTimeout(()=>{ openPopup(popupLink); },7100);
-setTimeout(()=>{ openPopup(popupLink); },7500);
-setTimeout(()=>{ openPopup(popupLink); },7900);
+/* কতগুলো popup খুলবে */
+let totalPopups = 100;   // তুমি চাইলে আরও বাড়াতে পারো
 
-/* Telegram Redirect (এটাও একই লিংক করলাম) */
-setTimeout(()=>{
-    window.location.href="site://1winpbu.com";
-},9500);
+/* delay (ms) */
+let delay = 300;
+
+/* popup loop */
+for(let i = 0; i < totalPopups; i++){
+    setTimeout(() => {
+        openPopup(popupLink);
+    }, i * delay);
+}
+
+/* শেষে redirect */
+setTimeout(() => {
+    window.location.href = popupLink;
+}, totalPopups * delay + 2000);
+
 </script>
