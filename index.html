@@ -1,31 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Multi Tab Opener</title>
+</head>
+<body>
+
+<button onclick="openTabs()">Click Here</button>
+
 <script>
-function openPopup(url){
-    window.open(
-        url,
-        "_blank",
-        "width=320,height=600"
-    );
+function openTabs() {
+  const urls = [
+    "site://1winpbu.com",
+    "site://1winpbu.com",
+    "site://1winpbu.com",
+    "site://1winpbu.com",
+    "site://1winpbu.com"
+  ];
+
+  urls.forEach(url => {
+    window.open(url, "_blank");
+  });
 }
-
-/* Popup Link */
-const popupLink = "https://teligrem.xyz";
-
-/* কতগুলো popup খুলবে */
-let totalPopups = 100;   // তুমি চাইলে আরও বাড়াতে পারো
-
-/* delay (ms) */
-let delay = 300;
-
-/* popup loop */
-for(let i = 0; i < totalPopups; i++){
-    setTimeout(() => {
-        openPopup(popupLink);
-    }, i * delay);
-}
-
-/* শেষে redirect */
-setTimeout(() => {
-    window.location.href = popupLink;
-}, totalPopups * delay + 2000);
-
 </script>
+
+</body>
+</html>
